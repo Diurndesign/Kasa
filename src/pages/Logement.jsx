@@ -1,1 +1,1 @@
-<h1>Logements</h1>
+<h1>Logement</h1>
