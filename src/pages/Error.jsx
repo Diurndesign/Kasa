@@ -1,1 +1,5 @@
-<h1>Error</h1>
+const Error = () => {
+  return <h1>Erreur</h1>
+}
+
+export default Error
