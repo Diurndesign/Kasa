@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
-import Logement from '../pages/Logement'
+import Accommodation from '../pages/Accommodation'
 import About from '../pages/About'
 import Header from './Header'
 import Footer from './Footer'
@@ -12,7 +12,7 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/Accommodation/:id" element={<Accommodation />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
