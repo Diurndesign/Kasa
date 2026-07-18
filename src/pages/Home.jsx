@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../components/Card'
+import Banner from '../components/Banner'
+import BannerImage from '../assets/Imageheader.png'
 
 const Home = () => {
   const [accommodation, setAccommodation] = useState([])
@@ -13,6 +15,8 @@ const Home = () => {
 
   return (
     <main>
+
+      <Banner cover={BannerImage} text="Chez vous, partout et ailleurs" />
       {accommodation.map((logement) => (
         <Link key={logement.id} to={`/logement/${logement.id}`}>
           <Card cover={logement.cover} title={logement.title} />
