@@ -1,3 +1,5 @@
+import './cards.scss'
+
 const Card = ({ title, cover }) => {
   return (
     <div className="card">

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../components/Card'
 import Banner from '../components/Banner'
-import BannerImage from '../assets/Imageheader.png'
+import BannerPicture from '../assets/pictureheader.png'
+import './home.scss'
 
 const Home = () => {
   const [accommodation, setAccommodation] = useState([])
@@ -13,17 +14,18 @@ const Home = () => {
       .then((data) => setAccommodation(data))
   }, [])
 
-  return (
-    <main>
+return (
+  <main>
+    <Banner cover={BannerPicture} text="Chez vous, partout et ailleurs" />
 
-      <Banner cover={BannerImage} text="Chez vous, partout et ailleurs" />
+    <section className="cards-grid">
       {accommodation.map((logement) => (
         <Link key={logement.id} to={`/logement/${logement.id}`}>
           <Card cover={logement.cover} title={logement.title} />
         </Link>
       ))}
-    </main>
-  )
-}
+    </section>
+  </main>
+)}
 
 export default Home
